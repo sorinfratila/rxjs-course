@@ -1,7 +1,17 @@
 
 
 .courses-panel {
-    max-width: 400px;
+    padding: 30px;
     margin: 0 auto;
+}
+
+pre {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+button {
+    padding: 12px;
+    margin: 2px;
 }
 
