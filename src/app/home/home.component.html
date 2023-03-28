@@ -1,28 +1,63 @@
-
 <div class="courses-panel">
 
-    <h3>All Courses</h3>
+    <h3>Examples</h3>
 
     <mat-tab-group>
 
-        <mat-tab label="Beginners">
-
-            <courses-card-list
-                    [courses]="beginnerCourses$ | async">
-
-            </courses-card-list>
-
+        <mat-tab label="Error callbacks">
+            <div class="full-page">
+                <button (click)="getCoursesErrorCallbacks()">Subscribe</button>
+                <button (click)="unsubscribeObs()">Unsubscribe</button>
+                <pre>{{ http$ | async | json }}</pre>
+            </div>
         </mat-tab>
 
-        <mat-tab label="Advanced">
-
-            <courses-card-list
-                    [courses]="advancedCourses$ | async"
-
-            ></courses-card-list>
-
+        <mat-tab label="Catch and replace strategy">
+            <div class="full-page">
+                <button (click)="getCatchAndReplaceError()">Subscribe</button>
+                <button (click)="unsubscribeObs()">Unsubscribe</button>
+                <pre>{{ catchErrorRes| json }}</pre>
+            </div>
         </mat-tab>
 
+        <mat-tab label="Catch and Rethrow strategy">
+            <div class="full-page">
+                <button (click)="getRethrow()">Subscribe</button>
+                <button (click)="unsubscribeObs()">Unsubscribe</button>
+            </div>
+
+        </mat-tab>
+        <mat-tab label="Catch Multiple and Rethrow">
+            <div class="full-page">
+                <button (click)="getCatchMultiple()">Subscribe</button>
+                <button (click)="unsubscribeObs()">Unsubscribe</button>
+                <pre>{{ catchMultipleRes| json }}</pre>
+            </div>
+
+        </mat-tab>
+        <mat-tab label="Finalize operator">
+            <div class="full-page">
+                <button (click)="getWithFinalizeOperator()">Subscribe</button>
+                <button (click)="unsubscribeObs()">Unsubscribe</button>
+                <pre>{{ finalizeOperatorRes | json }}</pre>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Retry strategy">
+            <div class="full-page">
+                <button (click)="getWithRetry()">Subscribe</button>
+                <button (click)="unsubscribeObs()">Unsubscribe</button>
+                <pre>{{ withRetryRes | json }}</pre>
+            </div>
+        </mat-tab>
+
+        <mat-tab label="Retry with delay strategy">
+            <div class="full-page">
+                <button (click)="delayWithRetry()">Subscribe</button>
+                <button (click)="unsubscribeObs()">Unsubscribe</button>
+                <pre>{{ delayRetryRes | json }}</pre>
+            </div>
+        </mat-tab>
     </mat-tab-group>
 
 
