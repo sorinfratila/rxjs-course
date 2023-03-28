@@ -1,7 +1,9 @@
 
-## The RxJs In Practice Course
+## RxJs error handling strategies
 
-This repository contains the code of the [RxJs In Practice Course](https://angular-university.io/course/rxjs-course).
+This fork only contains some error handling strategies
+
+This original repository contains the code of the [RxJs In Practice Course](https://angular-university.io/course/rxjs-course).
 
 This course repository is updated to Angular v15:
 
@@ -23,7 +25,7 @@ With the following command the angular-cli will be installed globally in your ma
 
 We can install the master branch using the following commands:
 
-    git clone https://github.com/angular-university/rxjs-course.git
+    git clone https://github.com/sorinfratila/rxjs-course.git
     
 This repository is made of several separate npm modules, that are installable separately. For example, to run the au-input module, we can do the following:
     
